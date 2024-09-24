@@ -27,6 +27,26 @@
 .App-link {
   color: #61dafb;
 }
+.navbar{
+  text-align: right;
+}
+
+.navbar .active {
+  color: #61dafb;
+}
+.navbar li {
+  display: inline;
+  padding: 10px;
+}
+
+.nav-bar-link {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar-link:hover{
+  color: green;
+}
 
 @keyframes App-logo-spin {
   from {

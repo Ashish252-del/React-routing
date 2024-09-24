@@ -1,0 +1,85 @@
+react-router-dom -->
+In case you have multiple pages in your project and you want to link them 
+then routing is required 
+for that you can go official site of react-router and install react-router 
+then you can see there how to use 
+whenever we want to do anything related to routing then that should be in BrowserRouter tag 
+either it is link tag (for redirecting to another page ) or it is routing part 
+follow app.js
+
+Links -->
+why to use Link why not anchor tag b/c anchor tag will behave like simple java script html and css 
+and will reload page as well where as Link tag will behave like react application 
+one mote thing you can use Link tag anywhere but it should be enclosed by BrowserRouter (if not directly then its parent should be enclosed )
+follow Homs.js 
+
+404 page -->
+to make a component if page not found or to redirect to a component if route does not found 
+path='/*' we use this path for handaling any rendom path which is not defined 
+    {/* <Route path='/*' element = {<Navigate  to="/"/>}/>      */} 
+if you want to navigate on particular path then you can use Navigate 
+
+Dynamic routing with params  -->
+let's understand why it is needed ?? let's say you a a list of 400 users and on click on a particular 
+user you have to show the all details about then users so for each users you cannot make 400 pages  that's why 
+we need dynamic routing . 
+<Route path='user/:name' element ={<User/>}   /> this way we define name params and using useParams we can get that params 
+follow about.js for ref 
+
+Style with React-Router -->
+remember one thing we can not use className with Link tag that's why we use navlink because it support
+classname for styling 
+follow Navbar 
+
+Active link -->
+to make link active of navbar , to let user user know on which link user is currently there 
+M1:-
+so whenever we clink on a link for example acnchor tag in react Navlink dom ad active class by itself on that link 
+so we can do style of that active class  
+M2:-
+Navlink provides isactive function in style object you can use that as well like this but I would recommend method 1 
+style={({isActive})=> {return {color:(isActive)?'green':'black'}}}
+
+React Router Search Params hooks -->
+Note --> Do not be confused that only react provides hooks no some packages or react like React Router also provides hooks 
+usecase :- many times we have seen in e-commerce website in url routes will contain query params 
+like /?pice = 10&&category==Iphone so basically Params hooks is use to set that query and to access value of query params in 
+code . follow Filter.js 
+
+useNavigate Hook -->
+well it is also react-router-dom hooks it also used to navigate 
+but on a function call or like on a button for ref follow home.js 
+
+Nested Routing -->
+when we do routing inside a route then it calls nested  routing 
+follow contact and app.js 
+
+UseLocation hooks -->
+ok so what does it means ?? basically when we go from a route to another route for example cuurently 
+you was on route A and then you go to route B then with the help of useLocation youu can access everything 
+that comes from route A to B along with all information of route B 
+also if we are sending data from A to B in form of state then in B we can access it 
+follow about and User for ref 
+
+Protected Route -->
+It is logical thing it is for authentication basically if user is not login then he should not be able to 
+access any other page follow login.js and App.js 
+
+Api calling -->
+whenever we make api call we need to make in useEffect in functional component and ComponentDidMount in class component 
+follow ApiCall.js , PostApi.js , DeleteApi.js and Update Api 
+
+Previous State -->
+It is very important because to access Previous state it is really tought but in useState hook react has 
+given previous state by itself in call back function od setState you can pass prev and prev will containe prev value of state 
+Follow PrevState.js 
+
+PrevProps -->
+this is used to get prev props means which we pass from parent to child so if we have to get like what was 
+prev props then follow PrevPop.js and Child.js 
+// how we used logic to get Prev pop 
+useRef is a hook that allows you to create a reference to a DOM node or a value that persists across re-renders.
+useRef is triggered before the component renders. In fact, useRef is executed during the render phase, before the DOM is updated.
+and useEffect triggered after the dom updation now pls follow Child.js 
+
+
